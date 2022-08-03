@@ -1,12 +1,13 @@
 import React from 'react';
 import './bootstrap.css';
 import { createRoot } from 'react-dom/client';
+import App from './App';
 
 // Mount function to start up the app
 const mount = (el) => {
   const root = createRoot(el);
 
-  root.render(<h1 className='text-2xl text-rose-300 font-sans'>Hi There</h1>);
+  root.render(<App />);
 };
 
 
