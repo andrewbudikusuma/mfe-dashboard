@@ -5,8 +5,10 @@ import AuthApp from './components/AuthApp';
 import './app.css';
 
 export default () => {
-  return <div>
-    <Header />
-    <AuthApp />
-  </div>
+  return (
+    <div>
+      <Header />
+      <AuthApp />
+    </div>
+  )
 };

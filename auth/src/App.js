@@ -9,7 +9,7 @@ import Signin from './components/Signin';
 import Forgot from './components/Forgot';
 
 export default () => {
-  return <div>
+  return <div className="h-full">
     <BrowserRouter>
       <Routes>
         <Route exact path="/forgot" element={<Forgot />} />
