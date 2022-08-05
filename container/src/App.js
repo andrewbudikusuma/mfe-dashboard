@@ -4,7 +4,7 @@ import Header from './components/Header';
 import AuthApp from './components/AuthApp';
 import './app.css';
 
-console.log('here')
+console.log('here there')
 export default () => {
   return (
     <div>
