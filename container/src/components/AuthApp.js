@@ -5,7 +5,11 @@ export default () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    mount(ref.current);
+    mount(ref.current, {
+      onNavigate: () => {
+        console.log('The container noticed navigation in Auth App');
+      }
+    });
   });
 
   return <div ref={ref} className="h-full"></div>
