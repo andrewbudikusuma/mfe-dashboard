@@ -1,13 +1,15 @@
 import React from 'react';
 import './bootstrap.css';
 import { createRoot } from 'react-dom/client';
+import { createMemoryHistory } from 'history';
 import App from './App';
 
 // Mount function to start up the app
 const mount = (el) => {
+  const history = createMemoryHistory();
   const root = createRoot(el);
 
-  root.render(<App />);
+  root.render(<App history={history} />);
 };
 
 

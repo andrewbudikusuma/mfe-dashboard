@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter,
+  unstable_HistoryRouter as HistoryRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -8,13 +8,13 @@ import {
 import Signin from './components/Signin';
 import Forgot from './components/Forgot';
 
-export default () => {
+export default ({ history }) => {
   return <div className="h-full">
-    <BrowserRouter>
+    <HistoryRouter history={history}>
       <Routes>
         <Route exact path="/forgot" element={<Forgot />} />
         <Route path="/" element={<Signin />} />
       </Routes>
-    </BrowserRouter>
+    </HistoryRouter>
   </div>
 }
