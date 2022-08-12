@@ -4,7 +4,6 @@ import Header from './components/Header';
 import AuthApp from './components/AuthApp';
 import './app.css';
 
-console.log('here there')
 export default () => {
   return (
     <BrowserRouter>
