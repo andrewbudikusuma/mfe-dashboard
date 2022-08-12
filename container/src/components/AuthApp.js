@@ -19,5 +19,16 @@ export default () => {
     history.listen(onParentNavigate);
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('addToken', (event) => {
+      const { detail } = event || {};
+      console.log(detail)
+    });
+
+    return () => {
+      window.removeEventListener('addToken', e);
+    };
+  }, []);
+
   return <div ref={ref} className="h-full"></div>
 };
